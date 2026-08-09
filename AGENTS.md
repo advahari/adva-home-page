@@ -28,7 +28,7 @@
 
 ## Local preview and validation
 - The local preview should be tested in the integrated browser at http://localhost:5500.
-- If the preview is not available, start a local static server on port 5500 before testing.
+- Do not start a local server yourself; assume that a live server is already running on port 5500.
 - Verify responsiveness in both tablet and mobile viewports using the integrated browser.
 - At minimum, check a tablet-sized viewport and a mobile-sized viewport after any layout or styling change.
 

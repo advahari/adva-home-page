@@ -11,6 +11,12 @@
   --radius-md: 18px;
   --radius-lg: 28px;
   --shadow-soft: 0 14px 30px rgba(8, 24, 49, 0.12);
+  --site-bg: #f4f7fb;
+  --section-bg: #f2f6fb;
+  --section-bg-alt: #fbfcff;
+  --hero-bg: linear-gradient(135deg, rgba(14, 27, 47, 0.7), rgba(11, 30, 58, 0.95)), radial-gradient(circle at 88% 16%, rgba(57, 191, 230, 0.25), transparent 34%), var(--bg-dark);
+  --card-bg: #ffffff;
+  --card-shadow: 0 14px 30px rgba(8, 24, 49, 0.12);
 }
 
 * {
@@ -25,8 +31,39 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--ink);
-  background: var(--surface-soft);
+  background: var(--site-bg);
   line-height: 1.65;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+body[data-theme="aurora"] {
+  --site-bg: #f3f6ff;
+  --section-bg: #f8faff;
+  --section-bg-alt: #f4f8ff;
+  --hero-bg: linear-gradient(135deg, #0f1534 0%, #2c4d89 45%, #7a5ef9 100%);
+  --card-bg: #ffffff;
+  --card-shadow: 0 24px 44px rgba(34, 64, 112, 0.16);
+}
+
+body[data-theme="glass"] {
+  --site-bg: #f4f7fb;
+  --section-bg: linear-gradient(180deg, #edf7ff 0%, #f8fbff 100%);
+  --section-bg-alt: #f9fdff;
+  --hero-bg: linear-gradient(135deg, #061b2d 0%, #1f4774 45%, #5d8ba5 100%);
+  --card-bg: rgba(255, 255, 255, 0.74);
+  --card-shadow: 0 22px 40px rgba(14, 32, 58, 0.12);
+}
+
+body[data-theme="midnight"] {
+  --site-bg: #050816;
+  --section-bg: #0a1120;
+  --section-bg-alt: #10192b;
+  --hero-bg: linear-gradient(130deg, #040816 0%, #111b2d 50%, #2f4d8a 100%);
+  --card-bg: #10192b;
+  --card-shadow: 0 24px 50px rgba(0, 0, 0, 0.36);
+  --ink: #f4f8fd;
+  --ink-soft: #a7bed8;
+  --line: #2a3550;
 }
 
 body.no-scroll {
@@ -135,12 +172,57 @@ h2 {
 .hero {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(14, 27, 47, 0.7), rgba(11, 30, 58, 0.95)),
-    radial-gradient(circle at 88% 16%, rgba(57, 191, 230, 0.25), transparent 34%),
-    var(--bg-dark);
+  background: var(--hero-bg);
   color: #f4f8fd;
   padding: 5rem 0 4rem;
+}
+
+.theme-picker {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.theme-picker-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #dcecf8;
+}
+
+.theme-options {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.theme-option {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.12);
+  color: #f5f8fd;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.theme-option:hover,
+.theme-option:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.theme-option.is-active {
+  background: linear-gradient(135deg, #39bfe6, #14a0cc);
+  color: #071326;
+  border-color: transparent;
 }
 
 .hero-bg-tech {
@@ -253,7 +335,7 @@ h2 {
 }
 
 .services {
-  background: #f2f6fb;
+  background: var(--section-bg);
 }
 
 .services h2,
@@ -270,9 +352,9 @@ h2 {
 
 .service-card {
   min-height: 320px;
-  background: #fff;
+  background: var(--card-bg);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--card-shadow);
   padding: 1.4rem;
   display: flex;
   flex-direction: column;
@@ -320,7 +402,7 @@ h2 {
 }
 
 .about {
-  background: #fbfcff;
+  background: var(--section-bg-alt);
 }
 
 .about-grid {
@@ -376,7 +458,7 @@ h2 {
 }
 
 .process {
-  background: #ffffff;
+  background: var(--card-bg);
 }
 
 .process h2 {
@@ -416,7 +498,7 @@ h2 {
 }
 
 .youtube {
-  background: #ffffff;
+  background: var(--section-bg-alt);
 }
 
 .youtube h2 {
@@ -487,7 +569,7 @@ h2 {
 }
 
 .gallery {
-  background: #f9fafc;
+  background: var(--section-bg);
 }
 
 .gallery-collage {
@@ -558,7 +640,7 @@ h2 {
 }
 
 .testimonials {
-  background: #ffffff;
+  background: var(--card-bg);
 }
 
 .testimonials h2,
@@ -592,7 +674,7 @@ h2 {
 }
 
 .faq {
-  background: #fbfcff;
+  background: var(--section-bg-alt);
 }
 
 .faq h2,
