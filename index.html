@@ -1,31 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Carousel Gallery</title>
+    <title>אדוה הרי פרלצוויג | בינה מלאכותית בשפה אנושית</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="page-header">
-        <p class="eyebrow">Gallery</p>
-        <h1>Image Carousel</h1>
-      </header>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="חזרה לראש העמוד">אדוה הרי פרלצוויג</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="פתיחת תפריט ניווט"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="ניווט ראשי">
+          <a href="#about">אודות</a>
+          <a href="#lectures-workshops">הרצאות וסדנאות</a>
+          <a href="#process">הדרכות והכשרות</a>
+          <a href="#gallery">גלריה</a>
+          <a href="#faq">שאלות ותשובות</a>
+          <a href="#contact">יצירת קשר</a>
+        </nav>
+      </div>
+    </header>
 
-      <section class="carousel" aria-label="Image gallery carousel">
-        <div class="carousel-frame">
-          <div class="slides" id="slides" aria-live="polite"></div>
-        </div>
-
-        <div class="gallery-controls">
-          <button class="nav-button prev" type="button" aria-label="Previous image">&#10094;</button>
-          <button class="nav-button next" type="button" aria-label="Next image">&#10095;</button>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg-tech" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="hero-name">אדוה הרי פרלצוויג</p>
+            <p class="hero-role">מנגישה טכנולוגית | מדריכה ומייעצת בעולמות ה-AI</p>
+            <h1 id="hero-title">בינה מלאכותית בשפה אנושית</h1>
+            <p class="hero-subtitle">ללמוד. לתרגל. ליישם.</p>
+            <a class="cta-button" href="#contact">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.2L12 13l8-4.8V8H4z" />
+              </svg>
+              יצירת קשר
+            </a>
+          </div>
+          <div class="hero-visual">
+            <div class="ai-orb" aria-hidden="true"></div>
+            <svg class="ai-robot" viewBox="0 0 220 220" aria-hidden="true" focusable="false">
+              <circle cx="110" cy="110" r="108" fill="none" />
+              <rect x="55" y="56" width="110" height="92" rx="22" />
+              <circle cx="92" cy="101" r="8" />
+              <circle cx="128" cy="101" r="8" />
+              <path d="M85 126h50" />
+              <path d="M110 55V35" />
+              <circle cx="110" cy="27" r="8" />
+            </svg>
+            <img src="images/seminar-ai-based-assistants.png" alt="אדוה הרי פרלצוויג" />
+          </div>
         </div>
       </section>
 
-      <div class="dots" id="dots" aria-label="Carousel indicators"></div>
+      <section class="services section" id="lectures-workshops" aria-labelledby="services-title">
+        <div class="container">
+          <h2 id="services-title">השירותים שלי</h2>
+          <p class="section-subtitle">
+            מהיכרות ראשונה עם AI ועד להטמעה ובניית פתרונות – בהתאמה לצרכים שלכם
+          </p>
+          <div class="services-grid" id="services-grid"></div>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-text">
+            <h2 id="about-title">נעים להכיר.</h2>
+            <p class="about-lead">הי, שמי אדוה והחיבור בין אנשים וטכנולוגיה זה הכשרון שלי.</p>
+            <p>
+              כשהבינה המלאכותית הפכה לחלק בלתי נפרד מעולם העבודה, הבנתי שנוצרה הזדמנות לשלב בין כל
+              העולמות שאני אוהבת: הכשרון שלי בעבודה עם אנשים, האהבה שלי להדרכה והסקרנות הבלתי פוסקת
+              לטכנולוגיה. משם היה לי ברור שהייעוד שלי הוא לסייע לאנשים ולארגונים להבין את הטכנולוגיה
+              החדשה, לא לחשוש ממנה, וללמד אותם איך להפוך אותה לכלי עבודה שמייצר ערך אמיתי.
+            </p>
+            <p>
+              התחלתי את דרכי בתחום משאבי האנוש, ובמהלך למעלה מ-15 שנים התמקדתי בגיוס, שימור עובדים,
+              פיתוח תהליכים והדרכה מקצועית. אבל עם השנים גיליתי שהשליחות האמיתית שלי היא לא רק בליווי
+              אנשים בעולם התעסוקה, אלא במיקוד ההדרכה והלמידה שלהם בטכנולוגיה מבוססת AI כחלק מתהליכי
+              עבודה יומיומיים.
+            </p>
+            <p>
+              יש לי תואר ראשון בחינוך מיוחד ותעודת פיתוח הדרכה בהתמחויות טכנולוגיות למידה. אני משלבת
+              את טכניקות ההוראה וההדרכה בעולמות הבינה המלאכותית.
+            </p>
+            <p>
+              אני מלווה עסקים, ארגונים ואנשי מקצוע במסע שלהם לעולם ה-AI באמצעות הרצאות, סדנאות
+              והכשרות מעשיות. בנוסף, אני מפתחת סוכני AI, צ'אטבוטים ופתרונות אוטומציה המותאמים לצרכים
+              העסקיים של כל לקוח.
+            </p>
+            <p>
+              אני מאמינה שטכנולוגיה צריכה להיות נגישה לכל אחד. לכן הגישה שלי היא להסביר מושגים
+              מורכבים בשפה פשוטה, לחבר בין חדשנות לצרכים אמיתיים, ולהעניק כלים פרקטיים שאפשר להתחיל
+              להשתמש בהם כבר מהיום הראשון.
+            </p>
+            <p>
+              המטרה שלי היא להפוך את הבינה המלאכותית לנגישה, ברורה ומעשית, כך שכל אדם, גם ללא רקע
+              טכנולוגי, יוכל לאמץ אותה ולהפוך אותה לכלי עבודה יומיומי.
+            </p>
+            <p>
+              כלי AI משתנים ומתחדשים בקצב מהיר, לכן המטרה שלי היא לא ללמד כלי מסוים, אלא להקנות
+              למשתתפים את המיומנויות והביטחון לעבוד עם בינה מלאכותית, להבין כיצד לגשת לכלים חדשים
+              ולהמשיך ללמוד ולהתפתח באופן עצמאי גם הרבה אחרי שההדרכה מסתיימת.
+            </p>
+          </div>
+          <div class="about-visual">
+            <div class="about-ellipse" aria-hidden="true"></div>
+            <img src="images/workshop-for-rafael-scholars.JPEG" alt="אדוה הרי פרלצוויג" />
+          </div>
+        </div>
+      </section>
+
+      <section class="process section" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <h2 id="process-title">כך נראה תהליך.</h2>
+          <div class="process-list" id="process-list"></div>
+        </div>
+      </section>
+
+      <section class="youtube section" id="youtube" aria-labelledby="youtube-title">
+        <div class="container">
+          <h2 id="youtube-title">למי שכבר מנוסה - אפשר גם קצת לבד...</h2>
+          <div class="carousel-shell" data-carousel="youtube">
+            <button class="carousel-arrow next" type="button" aria-label="סרטונים קודמים">&#10095;</button>
+            <div class="carousel-window">
+              <div class="carousel-track" id="youtube-track"></div>
+            </div>
+            <button class="carousel-arrow prev" type="button" aria-label="סרטונים הבאים">&#10094;</button>
+          </div>
+          <a
+            class="youtube-link"
+            href="https://www.youtube.com/@AIADVAntageTraining"
+            target="_blank"
+            rel="noreferrer"
+          >
+            לערוץ היוטיוב שלי
+          </a>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery" aria-label="גלריית הרצאות וסדנאות">
+        <div class="container">
+          <div class="gallery-collage" id="gallery-collage"></div>
+        </div>
+      </section>
+
+      <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <h2 id="testimonials-title">מה אומרים עליי?</h2>
+          <p class="section-subtitle">המלצות ממשתתפים, לקוחות וארגונים</p>
+          <div class="carousel-shell" data-carousel="testimonials">
+            <button class="carousel-arrow next" type="button" aria-label="המלצות קודמות">&#10095;</button>
+            <div class="carousel-window">
+              <div class="carousel-track testimonials-track" id="testimonials-track"></div>
+            </div>
+            <button class="carousel-arrow prev" type="button" aria-label="המלצות הבאות">&#10094;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 id="faq-title">שאלות ותשובות</h2>
+          <p class="section-subtitle">כל מה שרציתם לדעת על ההדרכות, הסדנאות והליווי</p>
+          <div class="faq-grid" id="faq-grid"></div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-shell">
+          <div class="contact-details">
+            <h2 id="contact-title">צרו איתי קשר</h2>
+            <p>
+              רוצים להתייעץ לגבי הרצאה, סדנה, הכשרה או ליווי?<br />
+              השאירו פרטים ואחזור אליכם.
+            </p>
+            <p class="contact-line">
+              <span class="label">טלפון:</span>
+              <a href="tel:0543188360">054-3188360</a>
+            </p>
+            <p class="contact-line">
+              <span class="label">אימייל:</span>
+              <a href="mailto:adva@hari-apps.com">adva@hari-apps.com</a>
+            </p>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <label for="name">שם</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email">אימייל</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="phone">טלפון</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">במה אוכל לעזור?</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">שליחה</button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer" aria-label="Footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>יצירת קשר</h3>
+          <p>טלפון: <a href="tel:0543188360">054-3188360</a></p>
+          <p>אימייל: <a href="mailto:adva@hari-apps.com">adva@hari-apps.com</a></p>
+        </div>
+        <div>
+          <h3>ניווט</h3>
+          <a href="#about">אודות</a>
+          <a href="#lectures-workshops">הרצאות וסדנאות</a>
+          <a href="#process">הכשרות לארגונים</a>
+          <a href="#lectures-workshops">הדרכה אישית</a>
+          <a href="#faq">שאלות ותשובות</a>
+          <a href="#contact">יצירת קשר</a>
+        </div>
+        <div>
+          <h3>עקבו אחריי</h3>
+          <a
+            class="social-link"
+            href="https://www.youtube.com/@AIADVAntageTraining"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="YouTube"
+          >
+            YouTube
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">© כל הזכויות שמורות</div>
+    </footer>
+
+    <div class="modal-overlay" id="service-modal" aria-hidden="true">
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="סגירת חלון">×</button>
+        <div class="modal-head">
+          <div class="modal-icon" id="modal-icon" aria-hidden="true"></div>
+          <div>
+            <h3 id="modal-title"></h3>
+            <p id="modal-subtitle"></p>
+          </div>
+        </div>
+        <div class="modal-content" id="modal-content"></div>
+        <button class="modal-cta" id="modal-cta" type="button"></button>
+      </section>
+    </div>
+
+    <div class="lightbox" id="gallery-lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="סגירת תמונה">×</button>
+      <button class="lightbox-arrow next" type="button" aria-label="תמונה קודמת">&#10095;</button>
+      <img id="lightbox-image" src="" alt="" />
+      <button class="lightbox-arrow prev" type="button" aria-label="תמונה הבאה">&#10094;</button>
+    </div>
 
     <script src="script.js"></script>
   </body>
