@@ -12,6 +12,8 @@
 ## Working conventions
 - Keep changes simple and lightweight. This project should stay static HTML/CSS/JS with no build step.
 - Preserve the existing structure unless a task explicitly requires a redesign.
+- All page content is defined in [content.md](content.md). This is the source of truth for the site copy, headings, sections, and text content.
+- We will discuss design and feature ideas here often, but the textual content for the page should always come from [content.md](content.md).
 - For any UI change, keep Hebrew and RTL behavior in mind:
   - prefer right-to-left layout and alignment
   - ensure text, icons, controls, and spacing feel natural in RTL
