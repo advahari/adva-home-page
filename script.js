@@ -1,24 +1,4 @@
-const themeButtons = document.querySelectorAll('.theme-option');
-const savedTheme = localStorage.getItem('site-theme') || 'default';
-
-function applyTheme(theme) {
-  document.body.dataset.theme = theme;
-  themeButtons.forEach((button) => {
-    const isActive = button.dataset.theme === theme;
-    button.classList.toggle('is-active', isActive);
-    button.setAttribute('aria-pressed', String(isActive));
-  });
-}
-
-themeButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const selectedTheme = button.dataset.theme;
-    localStorage.setItem('site-theme', selectedTheme);
-    applyTheme(selectedTheme);
-  });
-});
-
-applyTheme(savedTheme);
+document.body.dataset.theme = 'default';
 
 const serviceItems = [
   {
