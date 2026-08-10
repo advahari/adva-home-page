@@ -174,7 +174,7 @@ h2 {
   overflow: hidden;
   background: var(--hero-bg);
   color: #f4f8fd;
-  padding: 5rem 0 4rem;
+  padding: 5rem 0 0;
 }
 
 .theme-picker {
@@ -333,7 +333,6 @@ h2 {
 
 .hero-visual {
   position: relative;
-  min-height: 530px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -345,30 +344,7 @@ h2 {
   width: min(420px, 90%);
   max-height: 560px;
   object-fit: contain;
-}
-
-.ai-orb {
-  position: absolute;
-  z-index: 1;
-  width: 72%;
-  max-width: 320px;
-  aspect-ratio: 1;
-  right: 5%;
-  top: 10%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #d9eef8, #68b0cc 58%, #1f406d);
-  opacity: 0.32;
-}
-
-.ai-robot {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 15%;
-  width: clamp(130px, 22vw, 220px);
-  fill: none;
-  stroke: rgba(203, 223, 246, 0.72);
-  stroke-width: 8;
+  transform: scaleX(-1);
 }
 
 .services {
@@ -1044,10 +1020,6 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .hero-visual {
-    min-height: 420px;
-  }
-
   .about-visual {
     min-height: 420px;
     order: 2;
@@ -1105,17 +1077,11 @@ h2 {
   }
 
   .hero-visual {
-    min-height: 340px;
     margin-top: 0.8rem;
   }
 
   .hero-visual img {
     max-height: 360px;
-  }
-
-  .ai-robot {
-    width: 126px;
-    left: 8%;
   }
 
   .services-grid,
